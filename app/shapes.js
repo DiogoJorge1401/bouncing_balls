@@ -74,7 +74,6 @@ export class EvilCircle extends Shape {
 
   move() {
     window.addEventListener('keydown', (e) => {
-      console.log(e.key)
       switch (e.key) {
         case 'ArrowLeft':
         case 'a':
