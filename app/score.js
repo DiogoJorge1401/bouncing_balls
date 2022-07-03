@@ -1,7 +1,7 @@
 import { randomRGB } from './utils.js'
 
 export const { decrementScore, checkIfWon, ballsCount } = (() => {
-  let initialScore = 2
+  let initialScore = 25
 
   const title = document.querySelector('#score')
   setInterval(() => title.style.textShadow = `0 0 4px ${randomRGB()}`, 1000)
