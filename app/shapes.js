@@ -1,7 +1,7 @@
-import { ctx, height, width } from './canvas.js'
+import { ctx, height, width } from './canvas.js';
 import { checkIfWon, decrementScore } from './score.js';
 import { intervalTime } from './time.js';
-import { random, randomRGB } from './utils.js';
+import { randomRGB } from './utils.js';
 
 class Shape {
   constructor(x, y, velX, velY) {

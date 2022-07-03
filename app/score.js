@@ -1,25 +1,24 @@
+import { decrementBallsQuantity, getBallsQuantity } from './balls.js'
 import { randomRGB } from './utils.js'
 
-export const { decrementScore, checkIfWon, ballsCount } = (() => {
-  let initialScore = 25
-
+export const { decrementScore, checkIfWon, drawScore } = (() => {
   const title = document.querySelector('#score')
-  setInterval(() => title.style.textShadow = `0 0 4px ${randomRGB()}`, 1000)
+  setInterval(() => title.style.textShadow = `0 0 2px ${randomRGB()}`, 1000)
 
   const drawScore = () => {
-    title.textContent = `Ball count: ${initialScore}`
+    title.textContent = `Ball count: ${getBallsQuantity()}`
   }
 
-  const checkIfWon = () => initialScore === 0
+  const checkIfWon = () => getBallsQuantity() === 0
 
   drawScore()
 
   return {
     decrementScore() {
-      initialScore--
+      decrementBallsQuantity()
       drawScore()
     },
     checkIfWon,
-    ballsCount: initialScore
+    drawScore
   }
 })()

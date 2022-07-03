@@ -4,10 +4,10 @@ let initialTime = 1
 
 const title = document.querySelector('#time')
 
-setInterval(() => title.style.textShadow = `0 0 4px ${randomRGB()}`, 1000)
+setInterval(() => title.style.textShadow = `0 0 2px ${randomRGB()}`, 1000)
 
 const drawScore = () => {
-  title.textContent = `Time: ${initialTime}`
+  title.textContent = `Timer: ${initialTime}`
   initialTime++;
 }
 

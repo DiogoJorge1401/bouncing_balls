@@ -2,7 +2,9 @@ import './time.js'
 import { random, randomRGB } from './utils.js';
 import { Ball, EvilCircle } from './shapes.js';
 import { ctx, height, width } from './canvas.js';
-import { balls } from './balls.js'
+import { balls, setBalls } from './balls.js'
+
+setBalls()
 
 const evilCircleSize = random(10, 20);
 
